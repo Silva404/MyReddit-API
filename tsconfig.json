@@ -1,20 +1,21 @@
 {
-    "compilerOptions": {
-        "outDir": "./dir",
-        "module": "commonjs",
-        "target": "ES2019",
-        "baseUrl": "src",
-        "esModuleInterop": true,
-        "paths": {
-            "@modules/*": [
-                "modules/*"
-            ],
-            "@config/*": [
-                "config/*"
-            ],
-            "@shared/*": [
-                "shared/*"
-            ]
-        }
+  "compilerOptions": {
+    "outDir": "./dir",
+    "module": "commonjs",
+    "target": "ES2019",
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "@modules/*": [
+        "modules/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@shared/*": [
+        "shared/*"
+      ]
     }
+  }
 }

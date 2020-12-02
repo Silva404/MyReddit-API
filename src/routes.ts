@@ -4,6 +4,12 @@ const routes = Router();
 
 routes.use('/users');
 
-routes.post('/', (req, res) => { });
+routes.post('/', (request, response) => {
+  const { name, email, password } = request.body;
+
+  const user = await 
+
+  return
+});
 
 export default routes;
