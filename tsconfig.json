@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "outDir": "./dir",
+        "module": "commonjs",
+        "target": "ES2019",
+        "paths": {
+            "@modules/*": [
+                "modules/*"
+            ],
+            "@config/*": [
+                "config/*"
+            ],
+            "@shared/*": [
+                "shared/*"
+            ]
+        }
+    }
+}
