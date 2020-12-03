@@ -20,7 +20,7 @@ export default class CreateUserService {
 
     const hashedPassword = await hash(password, 8);
 
-    const user = await userRepository.create({
+    const user = userRepository.create({
       name,
       email,
       password: hashedPassword,
@@ -28,6 +28,6 @@ export default class CreateUserService {
 
     await userRepository.save(user);
 
-    return checkUserExists;
+    return user;
   }
 }
