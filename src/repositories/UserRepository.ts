@@ -8,6 +8,6 @@ export default class UserRepository extends Repository<User> {
       where: { email },
     });
 
-    return user || null;
+    return user;
   }
 }
