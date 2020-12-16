@@ -7,11 +7,19 @@ export default class CreatePosts1607971485963 implements MigrationInterface {
         name: 'posts',
         columns: [
           {
-            name: 'id',
+            name: 'post_id',
             type: 'uuid',
             isPrimary: true,
             generationStrategy: 'uuid',
             default: 'uuid_generate_v4()',
+          },
+          {
+            name: 'subreddit_id',
+            type: 'varchar',
+          },
+          {
+            name: 'user_id',
+            type: 'varchar',
           },
           {
             name: 'title',
@@ -19,10 +27,6 @@ export default class CreatePosts1607971485963 implements MigrationInterface {
           },
           {
             name: 'content',
-            type: 'varchar',
-          },
-          {
-            name: 'user_id',
             type: 'varchar',
           },
           {
