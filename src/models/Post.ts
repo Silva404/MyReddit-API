@@ -7,12 +7,13 @@ import {
   ManyToOne,
   JoinColumn,
 } from 'typeorm';
+import Subreddit from './Subreddit';
 import User from './User';
 
 @Entity('posts')
 class Post {
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  post_id: string;
 
   @Column()
   title: string;
@@ -26,6 +27,13 @@ class Post {
   @ManyToOne(() => User)
   @JoinColumn({ name: 'user_id' })
   user: User;
+
+  @Column()
+  subreddit_id: string;
+
+  @ManyToOne(() => User)
+  @JoinColumn({ name: 'subreddit_id' })
+  subreddit: Subreddit;
 
   @Column()
   votes: number;
